@@ -1,0 +1,13 @@
+{
+  "name": "tidepool-landing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "e2e": "playwright test",
+    "serve": "npx serve ."
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}

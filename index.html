@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tidepool Labs: hands-on cloud labs for training teams</title>
+  <meta name="description" content="Give every learner a real, disposable cloud environment with automatic checks. Launch a lab in under two minutes, with no setup on their side.">
+  <link rel="canonical" href="https://example.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tidepool Labs: hands-on cloud labs for training teams">
+  <meta property="og:description" content="Real, disposable cloud environments with automatic checks for every learner.">
+  <meta name="theme-color" content="#0f3d3e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f3d3e'/%3E%3Cpath d='M5 20c4-6 8 6 11 0s7 6 11 0' stroke='%23f2c230' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Do learners need their own cloud account?",
+       "acceptedAnswer": {"@type": "Answer", "text": "No. Each learner gets a temporary sandbox with scoped credentials. It is deleted when the lab ends."}},
+      {"@type": "Question", "name": "How are labs checked?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Validation scripts inspect the real environment, for example whether a storage account exists with public access off, and report pass or fail per task."}},
+      {"@type": "Question", "name": "What happens if a learner forgets to stop a lab?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Every lab has a time limit and a spending cap. Resources are removed automatically when either is reached."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="/" aria-label="Tidepool Labs home">
+      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="currentColor"/><path d="M5 20c4-6 8 6 11 0s7 6 11 0" stroke="#f2c230" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+      Tidepool Labs
+    </a>
+    <nav aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-small" href="#contact">Book a demo</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Learners practise on a real cloud, not a screenshot of one.</h1>
+        <p class="lede">Tidepool starts a disposable environment for each learner, checks their work against the live resources, and cleans up when they finish.</p>
+        <p><a class="btn" href="#contact">Book a demo</a></p>
+      </div>
+
+      <div class="lab" id="lab" aria-labelledby="lab-title">
+        <h2 id="lab-title" class="lab-title">Try a sample lab</h2>
+        <p class="lab-task">Task: create a storage account with public access turned off.</p>
+        <button class="btn btn-dark" id="lab-start" type="button">Start sample lab</button>
+        <ol class="steps" id="lab-steps" aria-live="polite">
+          <li data-state="idle">Provision sandbox</li>
+          <li data-state="idle">Apply learner's template</li>
+          <li data-state="idle">Check: storage account exists</li>
+          <li data-state="idle">Check: public access is off</li>
+        </ol>
+        <p class="lab-result" id="lab-result" role="status"></p>
+      </div>
+    </section>
+
+    <section class="audiences" aria-labelledby="aud-title">
+      <h2 id="aud-title">Built for the people who run training</h2>
+      <dl>
+        <dt>Training and enablement teams</dt>
+        <dd>Run a workshop for 200 people without 200 support tickets about access.</dd>
+        <dt>Software vendors</dt>
+        <dd>Let prospects try your product in a ready environment before they talk to sales.</dd>
+        <dt>Certification partners</dt>
+        <dd>Score practical exams from what learners actually built.</dd>
+      </dl>
+    </section>
+
+    <section id="how" class="how" aria-labelledby="how-title">
+      <h2 id="how-title">How a lab runs</h2>
+      <ol class="sequence">
+        <li><strong>You write the lab.</strong> Instructions, a starting template and the checks that decide pass or fail.</li>
+        <li><strong>Learners click Launch.</strong> A sandbox with scoped credentials appears in about two minutes.</li>
+        <li><strong>Checks run on demand.</strong> Each task shows pass or fail with a reason.</li>
+        <li><strong>The sandbox is deleted.</strong> At the time limit or spending cap, whichever comes first.</li>
+      </ol>
+    </section>
+
+    <section id="faq" class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Questions we hear most</h2>
+      <details>
+        <summary>Do learners need their own cloud account?</summary>
+        <p>No. Each learner gets a temporary sandbox with scoped credentials. It is deleted when the lab ends.</p>
+      </details>
+      <details>
+        <summary>How are labs checked?</summary>
+        <p>Validation scripts inspect the real environment, for example whether a storage account exists with public access off, and report pass or fail per task.</p>
+      </details>
+      <details>
+        <summary>What happens if a learner forgets to stop a lab?</summary>
+        <p>Every lab has a time limit and a spending cap. Resources are removed automatically when either is reached.</p>
+      </details>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Book a demo</h2>
+      <p>Tell us what you teach. We will reply within one working day.</p>
+      <form id="demo-form" novalidate>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" autocomplete="name" aria-describedby="name-err">
+          <p class="err" id="name-err"></p>
+        </div>
+        <div class="field">
+          <label for="email">Work email</label>
+          <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-err">
+          <p class="err" id="email-err"></p>
+        </div>
+        <div class="field">
+          <label for="topic">What do you want to teach?</label>
+          <textarea id="topic" name="topic" rows="3" aria-describedby="topic-err"></textarea>
+          <p class="err" id="topic-err"></p>
+        </div>
+        <button class="btn" type="submit">Request demo</button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Tidepool Labs is a portfolio demo project. No real product or data.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
